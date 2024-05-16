@@ -19,6 +19,32 @@ CREATE TABLE Departs(
 	[Quai] INT NOT NULL)
 GO
 
+INSERT INTO [dbo].[Arrivees]
+           ([NomNavire]
+           ,[DateHeureArrivee]
+           ,[PortOrigine]
+           ,[Terminal]
+           ,[TypeCargaison])
+     VALUES
+           ('Spirit'
+           ,'2024-05-12 12:15:00.000'
+           ,'New York'
+           ,'1')
+GO
+
+INSERT INTO [dbo].[Departs]
+           ([NomNavire]
+           ,[DateHeureDepart]
+           ,[PortDestination]
+           ,[Quai]
+           ,[TypeCargaison])
+     VALUES
+           ('Norvegian'
+           ,'2024-03-01 01:30:00.000'
+           ,'Montréal'
+           ,72)
+GO
+
 -- Question 2.
 ---- 1.
 DECLARE @moisEnCours int = MONTH(GETDATE()),
@@ -27,10 +53,12 @@ DECLARE @moisEnCours int = MONTH(GETDATE()),
 SELECT * FROM Departs 
 WHERE MONTH(DateHeureDepart) = @moisEnCours 
 	  AND YEAR(DateHeureDepart) = @anneeEnCours
+GO
 
 ---- 2.
 SELECT COUNT(*) FROM Arrivees
 WHERE PortOrigine = 'New York'
+GO
 
 ---- 3.
 SELECT TOP 1 NomNavire FROM Arrivees
@@ -40,10 +68,12 @@ ORDER BY DateHeureArrivee DESC
 SELECT * FROM Departs
 WHERE Quai = 72 
 	  AND YEAR(DateHeureDepart) = 2024
+GO
 
 ---- Question 3
-ALTER TABLE Arrivees ADD TypeCargaison varchar(max) NOT NULL DEFAULT 'Inconnu'
-ALTER TABLE Departs ADD TypeCargaison varchar(max) NOT NULL DEFAULT 'Inconnu'
+ALTER TABLE Arrivees ADD TypeCargaison nvarchar(max) NOT NULL DEFAULT 'Inconnu'
+ALTER TABLE Departs ADD TypeCargaison nvarchar(max) NOT NULL DEFAULT 'Inconnu'
+GO
 
 -- Question 4.
 -- =============================================
@@ -59,21 +89,21 @@ CREATE OR ALTER PROCEDURE GenererRapportMensuel
 AS
 BEGIN
 	SELECT 'Arrivée'		AS 'Voyage',
-		   NomNavire		AS 'Nom du navire',
-		   FORMAT(DateHeureArrivee, 'dd-MM-yyyy hh:mm')	AS 'Date et heure du voyage',
+		   NomNavire,
+		   DateHeureArrivee	AS 'DateHeureVoyage',
 		   PortOrigine		AS 'Port',
-		   TypeCargaison	AS 'Type de cargaison'
+		   TypeCargaison
 	FROM Arrivees 
 	WHERE MONTH(DateHeureArrivee) = @mois 
 	  AND YEAR(DateHeureArrivee) = @annee
 
 	UNION
 
-	SELECT 'Départ'										AS 'Voyage',
-		   NomNavire									AS 'Nom du navire',
-		   FORMAT(DateHeureDepart, 'dd-MM-yyyy hh:mm')	AS 'Date et heure du voyage',
-		   PortDestination								AS 'Port',
-		   TypeCargaison								AS 'Type de cargaison'
+	SELECT 'Départ'			AS 'Voyage',
+		   NomNavire,								
+		   DateHeureDepart	AS 'DateHeureVoyage',
+		   PortDestination	AS 'Port',
+		   TypeCargaison								
 	FROM Departs 
 	WHERE MONTH(DateHeureDepart) = @mois 
 	  AND YEAR(DateHeureDepart) = @annee
