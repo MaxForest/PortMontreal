@@ -3,3 +3,6 @@ Debug/
 bin/
 obj/
 *.bak
+/GestionVoyage.API/bin
+/GestionVoyage.API/obj
+/GestionVoyage.API/.vs
