@@ -4,8 +4,15 @@ using Microsoft.EntityFrameworkCore;
 
 namespace GestionVoyage.API.Repositories
 {
-    public class ArriveRepository(GestionVoyageDbContext context) : BaseRepository<Arrivee>(context)
+    public class ArriveRepository(GestionVoyageDbContext context)
     {
+        private readonly GestionVoyageDbContext _context = context;
+
+        public async Task Add(Arrivee value)
+        {
+            await _context.AddRangeAsync(value);
+        }
+
         public async Task<IEnumerable<Arrivee>> Get()
         {
             return await _context.Arrivees.ToListAsync();
