@@ -2,11 +2,8 @@
 
 namespace GestionVoyage.API.Models
 {
-    public class Depart
+    public class Depart : Trajet
     {
-        [Key]
-        public int Id { get; set; }
-        public string? NomNavire { get; set; }
         public DateTime DateHeureDepart { get; set; }
 
         // Pourrait être un FK de Port

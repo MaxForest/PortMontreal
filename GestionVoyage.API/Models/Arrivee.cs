@@ -2,11 +2,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace GestionVoyage.API.Models
 {
-    public class Arrivee
+    public class Arrivee : Trajet
     {
-        [Key]
-        public int Id { get; set; }
-        public string? NomNavire { get; set; }
         public DateTime DateHeureArrivee { get; set; }
 
         // Pourrait être un FK de Port

@@ -3,44 +3,23 @@ CREATE DATABASE GestionVoyage;
 GO
 
 USE [GestionVoyage]
-CREATE TABLE Arrivees(
+CREATE TABLE Trajets(
 	[Id] INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
-	[NomNavire] nvarchar(max) NOT NULL,
+	[NomNavire] nvarchar(max) NOT NULL)
+GO
+
+CREATE TABLE Arrivees(
+	[Id] INT PRIMARY KEY NOT NULL,
 	[DateHeureArrivee] DATETIME NOT NULL,
 	[PortOrigine] nvarchar(max) NOT NULL,
 	[Terminal] INT NOT NULL)
 GO
 
 CREATE TABLE Departs(
-	[Id] INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
-	[NomNavire] nvarchar(max) NOT NULL,
+	[Id] INT PRIMARY KEY NOT NULL,
 	[DateHeureDepart] DATETIME NOT NULL,
 	[PortDestination] nvarchar(max) NOT NULL,
 	[Quai] INT NOT NULL)
-GO
-
-INSERT INTO [dbo].[Arrivees]
-           ([NomNavire]
-           ,[DateHeureArrivee]
-           ,[PortOrigine]
-           ,[Terminal])
-     VALUES
-           ('Spirit'
-           ,'2024-05-12 12:15:00.000'
-           ,'New York'
-           ,'1')
-GO
-
-INSERT INTO [dbo].[Departs]
-           ([NomNavire]
-           ,[DateHeureDepart]
-           ,[PortDestination]
-           ,[Quai])
-     VALUES
-           ('Norvegian'
-           ,'2024-03-01 01:30:00.000'
-           ,'Montréal'
-           ,72)
 GO
 
 -- Question 2.
@@ -59,7 +38,8 @@ WHERE PortOrigine = 'New York'
 GO
 
 ---- 3.
-SELECT TOP 1 NomNavire FROM Arrivees
+SELECT TOP 1 t.NomNavire FROM Arrivees a
+join Trajets t on t.Id = a.Id
 ORDER BY DateHeureArrivee DESC
 
 ---- 4.
@@ -69,8 +49,7 @@ WHERE Quai = 72
 GO
 
 ---- Question 3
-ALTER TABLE Arrivees ADD TypeCargaison nvarchar(max) NOT NULL DEFAULT 'Inconnu'
-ALTER TABLE Departs ADD TypeCargaison nvarchar(max) NOT NULL DEFAULT 'Inconnu'
+ALTER TABLE Trajets ADD TypeCargaison nvarchar(max) NOT NULL DEFAULT 'Inconnu'
 GO
 
 -- Question 4.
@@ -86,23 +65,25 @@ CREATE OR ALTER PROCEDURE GenererRapportMensuel
 	@annee int
 AS
 BEGIN
-	SELECT 'Arrivée'		AS 'Voyage',
-		   NomNavire,
+	SELECT 'Arrivée'		AS 'Trajet',
+		   a.NomNavire,
 		   DateHeureArrivee	AS 'DateHeureVoyage',
 		   PortOrigine		AS 'Port',
-		   TypeCargaison
-	FROM Arrivees 
+		   a.TypeCargaison
+	FROM Arrivees a
+	join trajets t on t.Id = a.Id
 	WHERE MONTH(DateHeureArrivee) = @mois 
 	  AND YEAR(DateHeureArrivee) = @annee
 
 	UNION
 
-	SELECT 'Départ'			AS 'Voyage',
-		   NomNavire,								
+	SELECT 'Départ'			AS 'Trajet',
+		   d.NomNavire,								
 		   DateHeureDepart	AS 'DateHeureVoyage',
 		   PortDestination	AS 'Port',
-		   TypeCargaison								
-	FROM Departs 
+		   d.TypeCargaison								
+	FROM Departs d
+	join trajets t on t.Id = d.Id
 	WHERE MONTH(DateHeureDepart) = @mois 
 	  AND YEAR(DateHeureDepart) = @annee
 END
