@@ -23,8 +23,7 @@ INSERT INTO [dbo].[Arrivees]
            ([NomNavire]
            ,[DateHeureArrivee]
            ,[PortOrigine]
-           ,[Terminal]
-           ,[TypeCargaison])
+           ,[Terminal])
      VALUES
            ('Spirit'
            ,'2024-05-12 12:15:00.000'
@@ -36,8 +35,7 @@ INSERT INTO [dbo].[Departs]
            ([NomNavire]
            ,[DateHeureDepart]
            ,[PortDestination]
-           ,[Quai]
-           ,[TypeCargaison])
+           ,[Quai])
      VALUES
            ('Norvegian'
            ,'2024-03-01 01:30:00.000'
