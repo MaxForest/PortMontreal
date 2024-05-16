@@ -1,0 +1,257 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\git\\PortMontreal\\GestionVoyage.API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D7E1E0ED-26D6-4C4F-9CFB-AFC0D78B7E8F}|GestionVoyage.API.csproj|e:\\git\\portmontreal\\gestionvoyage.api\\rapport\\data\\rapportmensueldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7E1E0ED-26D6-4C4F-9CFB-AFC0D78B7E8F}|GestionVoyage.API.csproj|solutionrelative:rapport\\data\\rapportmensueldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7E1E0ED-26D6-4C4F-9CFB-AFC0D78B7E8F}|GestionVoyage.API.csproj|e:\\git\\portmontreal\\gestionvoyage.api\\context\\gestionvoyagedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7E1E0ED-26D6-4C4F-9CFB-AFC0D78B7E8F}|GestionVoyage.API.csproj|solutionrelative:context\\gestionvoyagedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7E1E0ED-26D6-4C4F-9CFB-AFC0D78B7E8F}|GestionVoyage.API.csproj|e:\\git\\portmontreal\\gestionvoyage.api\\controllers\\departcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7E1E0ED-26D6-4C4F-9CFB-AFC0D78B7E8F}|GestionVoyage.API.csproj|solutionrelative:controllers\\departcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7E1E0ED-26D6-4C4F-9CFB-AFC0D78B7E8F}|GestionVoyage.API.csproj|e:\\git\\portmontreal\\gestionvoyage.api\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7E1E0ED-26D6-4C4F-9CFB-AFC0D78B7E8F}|GestionVoyage.API.csproj|solutionrelative:startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7E1E0ED-26D6-4C4F-9CFB-AFC0D78B7E8F}|GestionVoyage.API.csproj|e:\\git\\portmontreal\\gestionvoyage.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D7E1E0ED-26D6-4C4F-9CFB-AFC0D78B7E8F}|GestionVoyage.API.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7E1E0ED-26D6-4C4F-9CFB-AFC0D78B7E8F}|GestionVoyage.API.csproj|e:\\git\\portmontreal\\gestionvoyage.api\\models\\arrivee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7E1E0ED-26D6-4C4F-9CFB-AFC0D78B7E8F}|GestionVoyage.API.csproj|solutionrelative:models\\arrivee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7E1E0ED-26D6-4C4F-9CFB-AFC0D78B7E8F}|GestionVoyage.API.csproj|e:\\git\\portmontreal\\gestionvoyage.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7E1E0ED-26D6-4C4F-9CFB-AFC0D78B7E8F}|GestionVoyage.API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7E1E0ED-26D6-4C4F-9CFB-AFC0D78B7E8F}|GestionVoyage.API.csproj|e:\\git\\portmontreal\\gestionvoyage.api\\controllers\\reportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7E1E0ED-26D6-4C4F-9CFB-AFC0D78B7E8F}|GestionVoyage.API.csproj|solutionrelative:controllers\\reportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7E1E0ED-26D6-4C4F-9CFB-AFC0D78B7E8F}|GestionVoyage.API.csproj|e:\\git\\portmontreal\\gestionvoyage.api\\repositories\\arriveerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7E1E0ED-26D6-4C4F-9CFB-AFC0D78B7E8F}|GestionVoyage.API.csproj|solutionrelative:repositories\\arriveerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7E1E0ED-26D6-4C4F-9CFB-AFC0D78B7E8F}|GestionVoyage.API.csproj|e:\\git\\portmontreal\\gestionvoyage.api\\repositories\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7E1E0ED-26D6-4C4F-9CFB-AFC0D78B7E8F}|GestionVoyage.API.csproj|solutionrelative:repositories\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7E1E0ED-26D6-4C4F-9CFB-AFC0D78B7E8F}|GestionVoyage.API.csproj|e:\\git\\portmontreal\\gestionvoyage.api\\repositories\\departrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7E1E0ED-26D6-4C4F-9CFB-AFC0D78B7E8F}|GestionVoyage.API.csproj|solutionrelative:repositories\\departrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7E1E0ED-26D6-4C4F-9CFB-AFC0D78B7E8F}|GestionVoyage.API.csproj|e:\\git\\portmontreal\\gestionvoyage.api\\controllers\\arriveecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7E1E0ED-26D6-4C4F-9CFB-AFC0D78B7E8F}|GestionVoyage.API.csproj|solutionrelative:controllers\\arriveecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7E1E0ED-26D6-4C4F-9CFB-AFC0D78B7E8F}|GestionVoyage.API.csproj|e:\\git\\portmontreal\\gestionvoyage.api\\models\\depart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7E1E0ED-26D6-4C4F-9CFB-AFC0D78B7E8F}|GestionVoyage.API.csproj|solutionrelative:models\\depart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7E1E0ED-26D6-4C4F-9CFB-AFC0D78B7E8F}|GestionVoyage.API.csproj|e:\\git\\portmontreal\\gestionvoyage.api\\gestionvoyage.api.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{D7E1E0ED-26D6-4C4F-9CFB-AFC0D78B7E8F}|GestionVoyage.API.csproj|solutionrelative:gestionvoyage.api.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 11,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\git\\PortMontreal\\GestionVoyage.API\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "E:\\git\\PortMontreal\\GestionVoyage.API\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T15:16:28.973Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\git\\PortMontreal\\GestionVoyage.API\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "E:\\git\\PortMontreal\\GestionVoyage.API\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-16T15:15:03.145Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ReportController.cs",
+              "DocumentMoniker": "E:\\git\\PortMontreal\\GestionVoyage.API\\Controllers\\ReportController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ReportController.cs",
+              "ToolTip": "E:\\git\\PortMontreal\\GestionVoyage.API\\Controllers\\ReportController.cs",
+              "RelativeToolTip": "Controllers\\ReportController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T13:43:35.411Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "E:\\git\\PortMontreal\\GestionVoyage.API\\Startup.cs",
+              "RelativeDocumentMoniker": "Startup.cs",
+              "ToolTip": "E:\\git\\PortMontreal\\GestionVoyage.API\\Startup.cs",
+              "RelativeToolTip": "Startup.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T13:13:58.544Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GestionVoyageDbContext.cs",
+              "DocumentMoniker": "E:\\git\\PortMontreal\\GestionVoyage.API\\Context\\GestionVoyageDbContext.cs",
+              "RelativeDocumentMoniker": "Context\\GestionVoyageDbContext.cs",
+              "ToolTip": "E:\\git\\PortMontreal\\GestionVoyage.API\\Context\\GestionVoyageDbContext.cs",
+              "RelativeToolTip": "Context\\GestionVoyageDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T13:07:26.454Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ArriveeRepository.cs",
+              "DocumentMoniker": "E:\\git\\PortMontreal\\GestionVoyage.API\\Repositories\\ArriveeRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\ArriveeRepository.cs",
+              "ToolTip": "E:\\git\\PortMontreal\\GestionVoyage.API\\Repositories\\ArriveeRepository.cs",
+              "RelativeToolTip": "Repositories\\ArriveeRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAgAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T13:06:17.19Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DepartRepository.cs",
+              "DocumentMoniker": "E:\\git\\PortMontreal\\GestionVoyage.API\\Repositories\\DepartRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\DepartRepository.cs",
+              "ToolTip": "E:\\git\\PortMontreal\\GestionVoyage.API\\Repositories\\DepartRepository.cs",
+              "RelativeToolTip": "Repositories\\DepartRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T13:06:04.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ArriveeController.cs",
+              "DocumentMoniker": "E:\\git\\PortMontreal\\GestionVoyage.API\\Controllers\\ArriveeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ArriveeController.cs",
+              "ToolTip": "E:\\git\\PortMontreal\\GestionVoyage.API\\Controllers\\ArriveeController.cs",
+              "RelativeToolTip": "Controllers\\ArriveeController.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAowBIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T13:03:15.629Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Arrivee.cs",
+              "DocumentMoniker": "E:\\git\\PortMontreal\\GestionVoyage.API\\Models\\Arrivee.cs",
+              "RelativeDocumentMoniker": "Models\\Arrivee.cs",
+              "ToolTip": "E:\\git\\PortMontreal\\GestionVoyage.API\\Models\\Arrivee.cs",
+              "RelativeToolTip": "Models\\Arrivee.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T12:57:28.95Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Depart.cs",
+              "DocumentMoniker": "E:\\git\\PortMontreal\\GestionVoyage.API\\Models\\Depart.cs",
+              "RelativeDocumentMoniker": "Models\\Depart.cs",
+              "ToolTip": "E:\\git\\PortMontreal\\GestionVoyage.API\\Models\\Depart.cs",
+              "RelativeToolTip": "Models\\Depart.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T14:11:37.176Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DepartController.cs",
+              "DocumentMoniker": "E:\\git\\PortMontreal\\GestionVoyage.API\\Controllers\\DepartController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DepartController.cs",
+              "ToolTip": "E:\\git\\PortMontreal\\GestionVoyage.API\\Controllers\\DepartController.cs",
+              "RelativeToolTip": "Controllers\\DepartController.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAgwC0AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T13:02:21.075Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RapportMensuelData.cs",
+              "DocumentMoniker": "E:\\git\\PortMontreal\\GestionVoyage.API\\Rapport\\Data\\RapportMensuelData.cs",
+              "RelativeDocumentMoniker": "Rapport\\Data\\RapportMensuelData.cs",
+              "ToolTip": "E:\\git\\PortMontreal\\GestionVoyage.API\\Rapport\\Data\\RapportMensuelData.cs",
+              "RelativeToolTip": "Rapport\\Data\\RapportMensuelData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T15:06:02.091Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "BaseRepository.cs",
+              "DocumentMoniker": "E:\\git\\PortMontreal\\GestionVoyage.API\\Repositories\\BaseRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\BaseRepository.cs",
+              "ToolTip": "E:\\git\\PortMontreal\\GestionVoyage.API\\Repositories\\BaseRepository.cs",
+              "RelativeToolTip": "Repositories\\BaseRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAABSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T15:34:14.818Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "GestionVoyage.API",
+              "DocumentMoniker": "E:\\git\\PortMontreal\\GestionVoyage.API\\GestionVoyage.API.csproj",
+              "RelativeDocumentMoniker": "GestionVoyage.API.csproj",
+              "ToolTip": "E:\\git\\PortMontreal\\GestionVoyage.API\\GestionVoyage.API.csproj",
+              "RelativeToolTip": "GestionVoyage.API.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-05-16T12:57:05.982Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
