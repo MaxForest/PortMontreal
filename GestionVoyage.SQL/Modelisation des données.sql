@@ -108,4 +108,4 @@ BEGIN
 END
 GO
 
--- Question 5.
+EXEC GenererRapportMensuel @mois = 5, @annee = 2024
