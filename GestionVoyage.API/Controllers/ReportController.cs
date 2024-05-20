@@ -1,5 +1,5 @@
 ﻿using GestionVoyage.API.Context;
-using GestionVoyage.API.Rapport.Data;
+using GestionVoyage.API.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
@@ -15,9 +15,9 @@ namespace GestionVoyage.API.Controllers
         // GET: api/<RapportController>/Mensuels
         [Route("Mensuels")]
         [HttpGet]
-        public async Task<IEnumerable<RapportMensuelData>> RapportsMensuels(int mois, int annee)
+        public async Task<IEnumerable<Trajet>> RapportsMensuels(int mois, int annee)
         {
-            return await _context.Database.SqlQueryRaw<RapportMensuelData>(
+            return await _context.Database.SqlQueryRaw<Trajet>(
                 "GenererRapportMensuel @mois, @annee",
                 new  SqlParameter("mois", mois),
                 new SqlParameter("annee", annee)

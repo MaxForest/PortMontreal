@@ -16,10 +16,9 @@ namespace GestionVoyage.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddDbContext<GestionVoyageDbContext>(options => options.UseSqlServer(_configuration.GetConnectionString("gestionVoyageConnection")));
+            services.AddDbContext<GestionVoyageDbContext>(options => options.UseLazyLoadingProxies().UseSqlServer(_configuration.GetConnectionString("gestionVoyageConnection")));
 
-            services.AddTransient<ArriveRepository>();
-            services.AddTransient<DepartRepository>();
+            services.AddTransient<TrajetRepository>();
         }
     }
 }

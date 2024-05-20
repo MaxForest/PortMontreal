@@ -5,9 +5,9 @@ namespace GestionVoyage.API.Context
 {
     public class GestionVoyageDbContext(DbContextOptions<GestionVoyageDbContext> options) : DbContext(options)
     {
-        public DbSet<Arrivee> Arrivees { get; set; }
+        public DbSet<Trajet> Trajets { get; set; }
 
-        public DbSet<Depart> Departs { get; set; }
+        public DbSet<Port> Ports { get; set; }
 
         public async Task AddRangeAsync<T>(params T[] values) where T : class
         {
@@ -19,6 +19,15 @@ namespace GestionVoyage.API.Context
         {
             await query.ExecuteDeleteAsync();
             await SaveChangesAsync();
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Trajet>()
+                .OwnsOne(b => b.Depart);
+
+            modelBuilder.Entity<Trajet>()
+                .OwnsOne(b => b.Arrivee);
         }
     }
 }

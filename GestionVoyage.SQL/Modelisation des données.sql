@@ -5,21 +5,28 @@ GO
 USE [GestionVoyage]
 CREATE TABLE Trajets(
 	[Id] INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
-	[NomNavire] nvarchar(max) NOT NULL)
+	[NomNavire] nvarchar(30) NOT NULL,
+	[Depart_Date] DATETIME NOT NULL,
+	[Depart_PortDestinationId] int NOT NULL,
+	[Depart_Quai] INT NOT NULL,
+	[Arrivee_Date] DATETIME NULL,
+	[Arrivee_PortOrigineId] int NULL,
+	[Arrivee_Terminal] INT NULL)
 GO
 
-CREATE TABLE Arrivees(
-	[Id] INT PRIMARY KEY NOT NULL,
-	[DateHeureArrivee] DATETIME NOT NULL,
-	[PortOrigine] nvarchar(max) NOT NULL,
-	[Terminal] INT NOT NULL)
+CREATE TABLE Ports(
+	[Id] INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+	[Nom] nvarchar(30) NOT NULL)
 GO
 
-CREATE TABLE Departs(
-	[Id] INT PRIMARY KEY NOT NULL,
-	[DateHeureDepart] DATETIME NOT NULL,
-	[PortDestination] nvarchar(max) NOT NULL,
-	[Quai] INT NOT NULL)
+ALTER TABLE Trajets  WITH CHECK ADD  CONSTRAINT [FK_.Trajets_Depart_PortId] FOREIGN KEY([Depart_Port_Id])
+REFERENCES Ports ([Id])
+ON DELETE NO ACTION
+GO
+
+ALTER TABLE Trajets  WITH CHECK ADD  CONSTRAINT [FK_.Trajets_Arrivee_PortId] FOREIGN KEY([Arrivee_Port_Id])
+REFERENCES Ports ([Id])
+ON DELETE NO ACTION
 GO
 
 -- Question 2.
@@ -27,29 +34,29 @@ GO
 DECLARE @moisEnCours int = MONTH(GETDATE()),
 		@anneeEnCours int = YEAR(GETDATE())
 
-SELECT * FROM Departs 
-WHERE MONTH(DateHeureDepart) = @moisEnCours 
-	  AND YEAR(DateHeureDepart) = @anneeEnCours
+SELECT * FROM Trajets 
+WHERE MONTH(Depart_Date) = @moisEnCours 
+	  AND YEAR(Depart_Date) = @anneeEnCours
 GO
 
 ---- 2.
-SELECT COUNT(*) FROM Arrivees
-WHERE PortOrigine = 'New York'
+SELECT COUNT(*) FROM Trajets t
+INNER JOIN Ports p on t.Depart_Port_Id = p.Id
+WHERE p.Nom = 'New York'
 GO
 
 ---- 3.
-SELECT TOP 1 t.NomNavire FROM Arrivees a
-join Trajets t on t.Id = a.Id
-ORDER BY DateHeureArrivee DESC
+SELECT TOP 1 t.NomNavire FROM Trajets t
+ORDER BY t.Arrivee_Date DESC
 
 ---- 4.
-SELECT * FROM Departs
-WHERE Quai = 72 
-	  AND YEAR(DateHeureDepart) = 2024
+SELECT * FROM Trajets
+WHERE Depart_Quai = 72 
+	  AND YEAR(Depart_Date) = 2024
 GO
 
 ---- Question 3
-ALTER TABLE Trajets ADD TypeCargaison nvarchar(max) NOT NULL DEFAULT 'Inconnu'
+ALTER TABLE Trajets ADD TypeCargaison int NOT NULL DEFAULT 0
 GO
 
 -- Question 4.
@@ -65,27 +72,12 @@ CREATE OR ALTER PROCEDURE GenererRapportMensuel
 	@annee int
 AS
 BEGIN
-	SELECT 'Arrivée'		AS 'Trajet',
-		   a.NomNavire,
-		   DateHeureArrivee	AS 'DateHeureVoyage',
-		   PortOrigine		AS 'Port',
-		   a.TypeCargaison
-	FROM Arrivees a
-	join trajets t on t.Id = a.Id
-	WHERE MONTH(DateHeureArrivee) = @mois 
-	  AND YEAR(DateHeureArrivee) = @annee
-
-	UNION
-
-	SELECT 'Départ'			AS 'Trajet',
-		   d.NomNavire,								
-		   DateHeureDepart	AS 'DateHeureVoyage',
-		   PortDestination	AS 'Port',
-		   d.TypeCargaison								
-	FROM Departs d
-	join trajets t on t.Id = d.Id
-	WHERE MONTH(DateHeureDepart) = @mois 
-	  AND YEAR(DateHeureDepart) = @annee
+	SELECT *
+	FROM Trajets
+	WHERE (MONTH(Depart_Date) = @mois 
+	  AND YEAR(Depart_Date) = @annee) OR
+	      (MONTH(Arrivee_Date) = @mois 
+	  AND YEAR(Arrivee_Date) = @annee)
 END
 GO
 
